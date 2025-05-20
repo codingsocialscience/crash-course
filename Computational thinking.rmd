@@ -1,5 +1,8 @@
 ---
 title: "Computational thinking"
+output:
+  github_document:
+    html_preview: true
 ---
 
 # What is computational thinking?
