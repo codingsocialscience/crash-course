@@ -227,4 +227,41 @@ for( i in 1:nrow(data) ){
 ```
 
 The statement `age_sum <- age_sum + age` increases age_sum by age.
-Similarly, `emperor_count <- emperor_count + 1` increases by one after processing each row.
+Similarly, `emperor_count <- emperor_count + 1` increases by one after processing each row, thus producing the count of emperors.
+
+To understand the code, you can pair up and for a [few first rows](https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/emperors_full.txt), think what are the values of `age`, `age_sum` and `emperor_count`.
+
+## Exercises
+
+Data file [`elections.txt`](https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/elections.txt) contains candidates names, their parties, their vote counts and ther birth year so that each candidate is on a single row:
+
+```
+Beatrice Vestergard,PartyA,643092,1982
+Titta-Riina Aapola,PartyA,443565,1998
+Mikko-Pekka Kaunismaa,PartyB,100104,1990
+```
+
+1. Calculate the number of candidates in PartyA.
+
+```{r}
+
+```
+
+2. Calculate the number of votes candidates in PartyA recieved.
+
+```{r}
+
+```
+
+3. On avarage, how many votes did candidates in PartyA recieve?
+
+```{r}
+
+```
+
+4. On avarage, did PartyB get more votes than PartyA per candidate?
+
+```{r}
+
+```
+
