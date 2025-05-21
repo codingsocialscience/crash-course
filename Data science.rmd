@@ -1,0 +1,80 @@
+---
+title: "Data science"
+output:
+  github_document:
+    html_preview: true
+---
+
+# Data science
+
+To get a brief overview on the opportunities for supervised machine learning to replace traditional quantitative approaches, let us examine the World Value Survey.
+First, download a country level dataset from [the World Value Survey website](https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp).
+
+We seek to explain happiness, as measured in Q46:
+
+> Taking all things together, would you say you are 
+>
+> 1. Very happy
+>
+> 2. Rather happy
+>
+> 3. Not very happy
+>
+> 4. Not at all happy
+
+
+```{r}
+data <- read.csv('F00013120-WVS_Wave_7_Canada_Csv_v5.0.csv', sep = ';') ## note: this is not the real data, but has similar structure to it
+data$V10 <- as.factor( data$Q46 )
+table( data$Q46 )
+```
+
+## Supervised machine learning practices
+
+Traditionally social scientists would use _all_ data to develop a linear regression model to see what factors might explain happiness.
+Data scientists approach this differently.
+To avoid _overfitting_ the data is split to two portition,
+one portion of the dataset gets used for model-development purposes only (training data)
+while the remaining, often smaller portion, is stored for use only when the model is ready (test data).
+Once the model (developed with reference to training data) has been developed, the researchers classify the test data with it.
+They can compare the values produced by the model with the actual values represented by the test data, since these values exists for the data.
+
+We use a general purpose library [caret](https://www.rdocumentation.org/packages/caret/) to worh with the process of supervised machine learning.
+
+```{r}
+install.packages("caret")
+library( caret )
+```
+
+Here we split the data so that 70% belong to the training data and remaining 30% is used for testing purposes.
+
+```{r}
+index <- createDataPartition(y=data$V10, p=0.7, list=FALSE)
+train <- data[index,]
+test <- data[-index,]
+```
+
+```{r}
+table( train$V10 )
+table( test$V10 )
+```
+
+```{r}
+model <- train( V10 ~ V4 + V5 + V6 + V7 + V8 + V9,  data=train, method="rpart" )
+```
+
+```{r}
+pred <- predict( model , newdata = test )
+```
+
+```{r}
+tab_class <- table( test$V10 , pred )
+confusionMatrix(tab_class, mode = "everything")
+```
+
+## Exercises
+
+1. `V10` has several unwanted values: `-5`, `-2` and `-1`. Remove them from the data and rerun the analysis.
+1. What other variables would you add to the analysis? Do they improve accuracy? See [survey documentation](https://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp) for the meaning of variables.
+1. What other methods than `rpart` exists (see [caret documentation](http://topepo.github.io/caret/train-models-by-tag.html) on available models)? Try out them. Do you get better results?
+1. What does cross validation mean? Try out cross validation and test out these things.
