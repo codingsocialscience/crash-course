@@ -10,13 +10,30 @@ Therefore, we quickly explore practical applications of machine learning in anal
 
 ## Before the workshop
 
-* Please install [RStudio](https://posit.co/downloads/) before the workshop.
-* Download [the examples](https://github.com/codingsocialscience/crash-course/archive/refs/heads/main.zip) used during the workshop.
+1. Please install [RStudio](https://posit.co/downloads/) before the workshop.
+1. Download [the examples](https://github.com/codingsocialscience/crash-course/archive/refs/heads/main.zip) used during the workshop and unzip it into a new folder.
+1. Download [World Value Survey dataset for some country](https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp) and store it in the same folder as the materials you just unzipped.
 
-## Using RMarkdown files
+## Using RStudio and RMarkdown files
 
+1. Open a project and search the folder you created in step 2 above.
+1. From the file tabs, open `Computational thinking.rmd`:
+
+![](./figures/rstudio-files.png)
+
+3. Once opened, choose a visual display:
+
+![](./figures/rstudio-visual.png)
+
+4. After this, you should see text and code segments:
+
+![](./figures/rstudio-notebooks.png)
+
+To execute or run the code in the code block, you need to press the green play button.
+You can edit the code directly inline, i.e., type new commands there and then just execute it.
 
 ## Get deeper?
 
 The examples and style used here follows the book [Computational Thinking and Social Science](https://uk.sagepub.com/en-gb/eur/computational-thinking-and-social-science/book268542).
+We focus on Chapters 2 and 3 in this crash course.
 
