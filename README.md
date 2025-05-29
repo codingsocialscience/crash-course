@@ -27,7 +27,7 @@ Therefore, we quickly explore practical applications of machine learning in anal
 
 4. After this, you should see text and code segments:
 
-![](./figures/rstudio-notebooks.png)
+![](./figures/rstudio-notebook.png)
 
 To execute or run the code in the code block, you need to press the green play button.
 You can edit the code directly inline, i.e., type new commands there and then just execute it.
