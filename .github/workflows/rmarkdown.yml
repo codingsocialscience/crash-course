@@ -1,0 +1,21 @@
+name: Create rmd to website
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Actions Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run render for Rmd
+        uses: ottrproject/ottr-preview@cansavvy-patch-1
+        with:
+          toggle_website: "rmd"
