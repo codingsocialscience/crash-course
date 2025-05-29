@@ -16,6 +16,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run render for Rmd
-        uses: ottrproject/ottr-preview@main
+        uses: ottrproject/ottr-preview@v1
         with:
           toggle_website: "rmd"
