@@ -82,7 +82,7 @@ A flat costs 250,000 euros and has an area of 75 m2. What is the price of the fl
 
 ## Repeating and `for` loop
 
-The above examples we have conducted the commands line by line, in order. However, often there is a need to *repeate* some commands; for example the same code used above to calculate Nero's reign is the same needed to calculate any emperor's reign if we have access to the years. However, instead of copy-pasting the above lines we rather say to the computer that repeat these command several times. For that purpose, programming languages have a `for`-loop.
+The above examples we have conducted the commands line by line, in order. However, often there is a need to repeat some commands; for example the same code used above to calculate Nero's reign is the same needed to calculate any emperor's reign if we have access to the years. However, instead of copy-pasting the above lines we rather say to the computer that repeat these command several times. For that purpose, programming languages have a `for`-loop.
 
 ```{r}
 for( stepper in 1:10 ) {
@@ -158,7 +158,7 @@ for( i in 1:nrow(data) ){
 
 By completing this exercise, you have now conducted *computational thinking*: you have taken an actual problem (likely killed as emperors), considered how our limited data could be used to find such cases, and then translated this insight into a form that a computer can understand. This is the essence of computational thinking and programming.
 
-Speak with a partner nearby: what kind of similar tasks can you identify in your own research work?
+💬 Speak with a partner nearby: what kind of similar tasks can you identify in your own research work?
 
 ## Exercises
 
