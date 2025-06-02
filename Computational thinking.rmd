@@ -90,16 +90,17 @@ for( stepper in 1:10 ) {
 }
 ```
 
-The following code prints out numbers `1`, `2`, ..., `10`. Similarly we could approach reading a file, line by line
+The following code prints out numbers `1`, `2`, ..., `10`. The variable `stepper` is _an iterator_: it gets every value between 1 and 10, first being the first value in that range (`1`), then the second (`2`) and so on until the final value (`10`) has been achieved.
+Similarly we could approach reading a file, line by line with `line_number` iterating over each line by one.
 
 ```{r}
 data <- read.csv("https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/emperors_full.txt", header = F)
-for( i in 1:nrow(data) ){
-    name <- data[i, 1]
-    birth_year <- data[i, 2]
-    death_year <- data[i, 3]
-    start_of_regin <- data[i, 4]
-    end_of_regin <- data[i, 5]
+for( line_number in 1:nrow(data) ){
+    name <- data[line_number, 1]
+    birth_year <- data[line_number, 2]
+    death_year <- data[line_number, 3]
+    start_of_regin <- data[line_number, 4]
+    end_of_regin <- data[line_number, 5]
     print( name )
 }
 ```
@@ -108,12 +109,12 @@ Use the code you wrote above and modify the example to calculate the age of each
 
 ```{r}
 data <- read.csv("https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/emperors_full.txt", header = F)
-for( i in 1:nrow(data) ){
-    name <- data[i, 1]
-    birth_year <- data[i, 2]
-    death_year <- data[i, 3]
-    start_of_regin <- data[i, 4]
-    end_of_regin <- data[i, 5]
+for( line_number in 1:nrow(data) ){
+    name <- data[line_number, 1]
+    birth_year <- data[line_number, 2]
+    death_year <- data[line_number, 3]
+    start_of_regin <- data[line_number, 4]
+    end_of_regin <- data[line_number, 5]
     print( name )
 }
 ```
@@ -128,12 +129,12 @@ In various programming languages this is known as the `if`-structure. If structu
 
 ```{r}
 data <- read.csv("https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/emperors_full.txt", header = F)
-for( i in 1:nrow(data) ){
-    name <- data[i, 1]
-    birth_year <- data[i, 2]
-    death_year <- data[i, 3]
-    start_of_regin <- data[i, 4]
-    end_of_regin <- data[i, 5]
+for( line_number in 1:nrow(data) ){
+    name <- data[line_number, 1]
+    birth_year <- data[line_number, 2]
+    death_year <- data[line_number, 3]
+    start_of_regin <- data[line_number, 4]
+    end_of_regin <- data[line_number, 5]
     if( name == "Julius Nepos") {
         print( name )
     }
@@ -144,12 +145,12 @@ The example shows the syntax for a conditional execution: it checks if name equa
 
 ```{r}
 data <- read.csv("https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/emperors_full.txt", header = F)
-for( i in 1:nrow(data) ){
-    name <- data[i, 1]
-    birth_year <- data[i, 2]
-    death_year <- data[i, 3]
-    start_of_regin <- data[i, 4]
-    end_of_regin <- data[i, 5]
+for( line_number in 1:nrow(data) ){
+    name <- data[line_number, 1]
+    birth_year <- data[line_number, 2]
+    death_year <- data[line_number, 3]
+    start_of_regin <- data[line_number, 4]
+    end_of_regin <- data[line_number, 5]
     if( name == "Julius Nepos") {
         print( name )
     }
