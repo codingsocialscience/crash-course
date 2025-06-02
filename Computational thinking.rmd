@@ -205,6 +205,12 @@ To understand the code, you can pair up and for a [few first rows](https://raw.g
 
 ## Exercises
 
+1.  How many of the emperors were likely killed as emperors?
+
+```{r}
+
+```
+
 Data file [`elections.txt`](https://raw.githubusercontent.com/codingsocialscience/data/refs/heads/master/elections.txt) contains candidates names, their parties, their vote counts and their birth year so that each candidate is on a single row:
 
 ```         
@@ -213,7 +219,7 @@ Titta-Riina Aapola,PartyA,443565,1998
 Mikko-Pekka Kaunismaa,PartyB,100104,1990
 ```
 
-1.  Calculate the number of candidates in PartyA.
+2.  Calculate the number of candidates in PartyA.
 
 ```{r}
 
@@ -221,19 +227,19 @@ data <- read.csv("https://raw.githubusercontent.com/codingsocialscience/data/ref
 
 ```
 
-2.  Calculate the number of votes candidates in PartyA received.
+3.  Calculate the number of votes candidates in PartyA received.
 
 ```{r}
 
 ```
 
-3.  On average, how many votes did candidates in PartyA receive?
+4.  On average, how many votes did candidates in PartyA receive?
 
 ```{r}
 
 ```
 
-4.  On average, did PartyB get more votes than PartyA per candidate?
+5.  On average, did PartyB get more votes than PartyA per candidate?
 
 ```{r}
 
